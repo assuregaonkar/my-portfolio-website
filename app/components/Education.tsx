@@ -16,8 +16,7 @@ const Education = () => {
         </h2>
         <div
           className="rounded-xl p-6 border hover:border-indigo-800 transition-all duration-700 flex flex-col sm:flex-row sm:items-center gap-4"
-          style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-color)' }}
-          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(24px)', transitionDelay: '150ms' }}
+          style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border-color)', opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(24px)', transitionDelay: '150ms' }}
         >
           <div className="text-4xl shrink-0">🎓</div>
           <div className="flex-1">
