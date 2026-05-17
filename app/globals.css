@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #030712;
+  --bg-secondary: #111827;
+  --bg-card: #111827;
+  --bg-card-hover: #1f2937;
+  --border-color: #1f2937;
+  --border-hover: #312e81;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --text-faint: #6b7280;
+  --accent: #6366f1;
+  --accent-light: #818cf8;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --border-color: #e2e8f0;
+  --border-hover: #a5b4fc;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #475569;
+  --text-faint: #64748b;
+  --accent: #4f46e5;
+  --accent-light: #6366f1;
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Theme-aware utility classes ── */
+.theme-bg-primary    { background-color: var(--bg-primary); }
+.theme-bg-secondary  { background-color: var(--bg-secondary); }
+.theme-bg-card       { background-color: var(--bg-card); }
+.theme-border        { border-color: var(--border-color); }
+.theme-text-primary  { color: var(--text-primary); }
+.theme-text-secondary{ color: var(--text-secondary); }
+.theme-text-muted    { color: var(--text-muted); }
+.theme-text-faint    { color: var(--text-faint); }
+.theme-accent        { color: var(--accent); }
+
+/* ── Hover overrides — outside @layer so Tailwind v4 cannot purge them ── */
+:is(.hover-accent):hover        { color: var(--accent) !important; }
+:is(.hover-border-accent):hover { border-color: var(--accent) !important; }
+
+/* Skill chip group hover */
+:is(.group):hover :is(.skill-chip-icon) { border-color: var(--accent) !important; }
+:is(.group):hover :is(.skill-chip-label) { color: var(--accent) !important; }
+
+/* Contact card group hover */
+:is(.group):hover :is(.contact-label) { color: var(--accent) !important; }
+
+nextjs-portal {
+  left: unset !important;
+  top: unset !important;
+}
