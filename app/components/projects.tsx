@@ -32,8 +32,8 @@ const projects = [
       'Resume PDF download + profile photo in circular frame',
       'Fully responsive — mobile-first layout with Tailwind CSS v4',
     ],
-    github: 'https://github.com/assuregaonkar',
-    demo: null,
+    github: 'https://github.com/assuregaonkar/my-portfolio-website',
+    demo: 'https://anushasuregaonkar-portfolio.vercel.app',
   },
 ];
 
